@@ -22,6 +22,11 @@ export class App extends Component {
             })}
           </ul>
         )}
+        {this.props.users.error && (
+          <div>
+            A network error occured
+          </div>
+        )}
       </div>
     );
   }

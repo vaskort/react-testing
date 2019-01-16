@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App Component renders an error message when a network error occurs 1`] = `
+<div
+  className="App"
+>
+  <button
+    className="loadButton"
+    disabled={false}
+  >
+    Load Users
+  </button>
+  <div>
+    A network error occured
+  </div>
+</div>
+`;
+
 exports[`App Component renders without crashing 1`] = `
 <div
   className="App"

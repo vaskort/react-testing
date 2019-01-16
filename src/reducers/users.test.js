@@ -3,7 +3,8 @@ import users from "./users";
 describe("users Reducer", () => {
   const initialState = {
     users: [],
-    loading: false
+    loading: false,
+    error: false
   };
 
   it("returns the initial state correctly", () => {
@@ -17,7 +18,8 @@ describe("users Reducer", () => {
 
     expect(reducer).toEqual({
       users: [],
-      loading: true
+      loading: true,
+      error: false
     });
   });
 
@@ -41,7 +43,8 @@ describe("users Reducer", () => {
           name: "foo"
         }
       ],
-      loading: false
+      loading: false,
+      error: false
     });
   });
 });

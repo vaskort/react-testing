@@ -1,6 +1,7 @@
 export default (state = {
   users: [],
-  loading: false
+  loading: false,
+  error: false
 }, action) => {
   switch (action.type) {
     case "GET_USERS_PENDING":
@@ -14,7 +15,8 @@ export default (state = {
       });
     case "GET_USERS_REJECTED":
       return Object.assign({}, state, {
-        loading: false
+        loading: false,
+        error: true
       });
     default:
       return state;

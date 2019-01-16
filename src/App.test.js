@@ -10,12 +10,20 @@ describe('App Component', () => {
     props = {
       users: {
         users: [],
-        loading: false
+        loading: false,
+        error: false
       }
     };
   });
 
   it('renders without crashing', () => {
+    const tree = renderer.create(<App {...props} />)
+
+    expect(tree.toJSON()).toMatchSnapshot();
+  });
+
+  it('renders an error message when a network error occurs', () => {
+    props.users.error = true;
     const tree = renderer.create(<App {...props} />)
 
     expect(tree.toJSON()).toMatchSnapshot();
